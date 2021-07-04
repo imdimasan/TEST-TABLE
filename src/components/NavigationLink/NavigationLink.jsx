@@ -16,6 +16,7 @@ function NavigationLink ({
         onClick={onClick}
         className={className}
         target={openInNewTab? "_blank" : "_self"}
+        rel={"noreferrer"}
         title={title}
         >{children}</a>
         ) : (         
