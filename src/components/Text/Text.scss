@@ -1,6 +1,26 @@
-.page__title {
-  font-family: "MontserratAlternates", arial;
+p {
+  font-family: "Montserrat", arial;
+  font-size: 1.2rem;
   font-weight: 500;
-  font-size: 3rem;
+}
+span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", arial;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+h1 {
   text-align: center;
+  font-family: "Montserrat", arial;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-family: "Montserrat", arial;
+  font-size: 2rem;
+  font-weight: 500;
 }

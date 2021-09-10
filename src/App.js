@@ -1,6 +1,6 @@
 import AppRouter from "./routes/AppRouter";
 import { Header } from "modules";
-import "./assets/fonts/MontserratAlternates/index.scss";
+import "./assets/fonts/Montserrat/index.scss";
 
 function App() {
   return (

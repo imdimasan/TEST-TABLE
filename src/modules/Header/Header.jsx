@@ -5,10 +5,9 @@ import "./Header.scss"
 
 function Header () {
     return (
-        <div className="wrapper header">
+        <div className="header">
         <menu>
-            <li><NavigationLink href={pageRoutes.HOME} className={"header__menu__item"} title={"Go to Home Page"}>Home</NavigationLink></li>
-            <li><NavigationLink href={pageRoutes.ADD} className={"header__menu__item"} title={"Go to Add Page"}>Add Page</NavigationLink></li>
+            <li><NavigationLink href={pageRoutes.HOME} title={"Go to Home Page"}>Home</NavigationLink></li>
         </menu>
         </div>
     )

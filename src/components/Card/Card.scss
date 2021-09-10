@@ -1,0 +1,18 @@
+$white: #ffffff;
+$black: #000000;
+$lightgray: #f5f5f5;
+
+.card {
+  padding: 2% 0;
+  background: $lightgray;
+  text-align: center;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  min-height: 20rem;
+}
+
+@media (max-width: 575.98px) {
+  .card {
+    padding: 2%;
+  }
+}

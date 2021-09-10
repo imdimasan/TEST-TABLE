@@ -1,6 +1,6 @@
 import { Switch, Route, Redirect } from "react-router-dom";
 import { pageRoutes } from "constants/pageRoutes";
-import { Page404, HomePage, AddPage } from "pages";
+import { Page404, HomePage } from "pages";
 
 function AppRouter() {
   return (
@@ -8,9 +8,6 @@ function AppRouter() {
       <Switch>
         <Route exact path={pageRoutes.HOME}>
           <HomePage />
-        </Route>
-        <Route exact path={pageRoutes.ADD}>
-          <AddPage />
         </Route>
         <Redirect exact from="/" to={pageRoutes.HOME} />
         <Route>
