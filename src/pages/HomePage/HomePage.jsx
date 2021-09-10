@@ -1,6 +1,6 @@
-import axios from "axios";
 import { Text, Table, Card, Input, Pagination } from "components";
 import { useState, useEffect } from "react";
+import axios from "axios";
 import "./HomePage.scss";
 
 function HomePage() {
@@ -144,38 +144,36 @@ function HomePage() {
   };
 
   // RENDER
-  if (loading) {
-    return (
-      <div className="wrapper">
-        <Text variant="h1" className="page__title">
-          MY CLIENT LIST
-        </Text>
-        <Input disabled={true} placeholder="Search by name ..."></Input>
-        <Table pageSize={pageSize} loading={loading}></Table>
-        <Card data={fullInfo}></Card>
-      </div>
-    );
-  }
 
   return (
     <div className="wrapper">
       <Text variant="h1" className="page__title">
         MY CLIENT LIST
       </Text>
-      <Input
-        placeholder="Search by name ..."
-        onChange={changeHandler}
-        value={findByName}
-        type="text"
-      ></Input>
 
-      <Table
-        data={currentPageView}
-        pageSize={pageSize}
-        loading={loading}
-        onClick={showFullInfo}
-        sortData={sortData}
-      ></Table>
+      {loading ? (
+        <Input disabled={true} placeholder="Search by name ..."></Input>
+      ) : (
+        <Input
+          placeholder="Search by name ..."
+          onChange={changeHandler}
+          value={findByName}
+          type="text"
+        ></Input>
+      )}
+
+      {loading ? (
+        <Table pageSize={pageSize} loading={loading}></Table>
+      ) : (
+        <Table
+          data={currentPageView}
+          pageSize={pageSize}
+          loading={loading}
+          onClick={showFullInfo}
+          sortData={sortData}
+        ></Table>
+      )}
+
       <Pagination
         totalPages={totalPages}
         paginate={paginate}
