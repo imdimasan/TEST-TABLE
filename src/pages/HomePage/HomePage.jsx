@@ -1,7 +1,7 @@
 import { Text, Table, Card, Input, Pagination } from "components";
 import { useState, useEffect } from "react";
-import axios from "axios";
 import "./HomePage.scss";
+import { getData } from "request/getRequest";
 
 function HomePage() {
   const URL =
@@ -57,20 +57,7 @@ function HomePage() {
 
   // GET QUERY
   useEffect(() => {
-    const getData = async () => {
-      setLoading(true);
-      await axios
-        .get(URL)
-        .then(function (response) {
-          setData(response.data);
-          setLoading(false);
-        })
-        .catch(function (error) {
-          console.log(error);
-        })
-        .then(function () {});
-    };
-    getData();
+    getData({ setData, setLoading, URL });
   }, []);
 
   // SHOW FULL INFORMATION
